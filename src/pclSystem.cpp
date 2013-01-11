@@ -1,10 +1,17 @@
 #include "pclSystem.h"
 #include "ofMain.h"
 
+void pclSystem::addParticle	(pclType &part)			{particles.push_back(part)		;}
+
+void pclSystem::addEmitter	(pclEmitter &emit)		{emitters.push_back(emit)		;}
+
+void pclSystem::addField	(pclField &attract)		{fields.push_back(attract)		;}
+
+
 void pclSystem::animate() {
-	
+
 	double x,y,d,theta,force;
-	
+
 	for (int i = 0;i < particles.size();i++) {
 		for (int j = 0;j < fields.size();j++) {
 				y = abs(particles[i].y-fields[j].y);
@@ -41,7 +48,7 @@ void pclSystem::animate() {
 				particles[i].size = 0;
 			}
 		}
-	
+
 		particles[i].ySpeed += gravityY;
 		particles[i].xSpeed += gravityX;
 

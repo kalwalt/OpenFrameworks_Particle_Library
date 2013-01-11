@@ -13,10 +13,10 @@ class pclSystem{
 public:
 
 	pclSystem(double systemGravityY = 0,double systemGravityX = 0) : gravityY(systemGravityY),gravityX(systemGravityX) {}
-	
-	void pclSystem::addParticle	(pclType &part)			{particles.push_back(part)		;}
-	void pclSystem::addEmitter	(pclEmitter &emit)		{emitters.push_back(emit)		;}
-	void pclSystem::addField	(pclField &attract)		{fields.push_back(attract)		;}
+
+	void addParticle(pclType &part)	;
+	void addEmitter(pclEmitter &emit)	;
+	void addField(pclField &attract)	;
 
 	//double getGravity
 
